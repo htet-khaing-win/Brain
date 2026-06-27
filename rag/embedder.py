@@ -8,3 +8,12 @@ def embed_text(text: str) -> list[float]:
 def embed_batch(texts: list[str]) -> list[list[float]]:
     """Get embedding vectors for a batch of texts using Ollama API"""
     return [embed_text(t) for t in texts] 
+
+# from openai import OpenAI
+# client = OpenAI()
+# resp = client.embeddings.create(
+#  model="text-embedding-3-small",
+#  input=text,
+#  dimensions=1536, 
+# )
+# vector = resp.data[0].embedding
